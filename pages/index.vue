@@ -1,5 +1,9 @@
 <template>
-  <Tutorial/>
+  <div class="container d-grid gap-2">
+    <div></div>
+    <MainCard />
+    <CoursesCatalogue />
+  </div>
 </template>
 
 <script>
