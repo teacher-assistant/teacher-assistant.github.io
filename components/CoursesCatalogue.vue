@@ -84,6 +84,7 @@ export default {
 					name:'Digital Logic Design',
 					semester:'Fall',
 					university:'University of Zanjan',
+					link:'https://teacher-assistant.github.io/fall2021-DigitalLogicDesign',
 					topics:[
 						{
 							name:'math',

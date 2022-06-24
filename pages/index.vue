@@ -8,6 +8,9 @@
 
 <script>
 export default {
-  name: 'IndexPage'
+  name: 'IndexPage',
+  head(){
+    return 'Teacher Assistant'
+  }
 }
 </script>
