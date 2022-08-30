@@ -3,23 +3,29 @@
 		<div class="d-grid gap-1" v-for="course in courses">
 	      	<div class="alert-primary rounded p-2 p-lg-4 p-lg-2 row">
 	        	<div class="d-grid gap-2 col-5">
-	        		<span>
+	        		<div class="d-flex justify-content-start">
 	        			<box-icon name='book'></box-icon>
-	        			{{ course.name }}
-	        		</span>
-	        		<span>
+	        			<div class="ms-2">
+	        				{{ course.name }}
+	        			</div>
+	        		</div>
+	        		<div>
 	        			<box-icon v-for="topic in course.topics" size="md" :type="topic.type" :name='topic.name'></box-icon>
-	        		</span>
+	        		</div>
 	        	</div>
 	        	<div class="d-grid gap-2 col-5">
-	        		<span>
+	        		<div class="d-flex justify-content-start">
 	        			<box-icon name='calendar'></box-icon>
-	        			{{ course.semester }} - {{ course.year }}
-	        		</span>
-	        		<span>
-	        			<box-icon name='world'></box-icon>
-	        			{{ course.university }}
-	        		</span>
+	        			<div class="ms-2">
+	        				{{ course.semester }} {{ course.year }}
+	        			</div>
+	        		</div>
+	        		<div class="d-flex justify-content-start">
+	        			<box-icon type='solid' name='school'></box-icon>
+	        			<div class="ms-2">
+	        				{{ course.university }}
+	        			</div>
+	        		</div>
 	        	</div>
 	        	<div class="col-2">
 	        		<a
@@ -33,6 +39,7 @@
 	        	</div>
 	    	</div>
 	    </div>
+	    <div></div>
 	</div>
 </template>
 
@@ -52,6 +59,7 @@ export default {
 							name:'python',
 							type:'logo'
 						},
+
 						{
 							name:'postgresql',
 							type:'logo'
