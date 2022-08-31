@@ -80,7 +80,7 @@ export default {
 				},
 				{
 					year:'2022',
-					name:'Principles Of Database Design',
+					name:'Principles of Database Design',
 					semester:'Winter',
 					university:'University of Zanjan',
 					link:'https://teacher-assistant.github.io/winter2022-PrinciplesOfDatabaseDesign',
