@@ -34,7 +34,12 @@
 	        			class="btn btn-dark"
 	        			:href="course.link"
 	        		>
-						Course Page
+	        		<div class="d-flex justify-content-start">
+	        			<box-icon name='link' color='white' ></box-icon>
+						<div class="ms-2">
+							Course page
+						</div>
+	        		</div>
 					</a>
 	        	</div>
 	    	</div>
