@@ -55,6 +55,31 @@ export default {
 			courses:[
 				{
 					year:'2022',
+					name:'Machine Learning',
+					semester:'Fall',
+					university:'Sharif University of Technology',
+					link:'#',
+					topics:[
+						{
+							name:'math',
+							type:''
+						},
+						{
+							name:'python',
+							type:'logo'
+						},
+						{
+							name:'terminal',
+							type:'solid'
+						},
+						{
+							name:'github',
+							type:'logo'
+						}
+					]
+				},
+				{
+					year:'2022',
 					name:'Principles Of Database Design',
 					semester:'Winter',
 					university:'University of Zanjan',
