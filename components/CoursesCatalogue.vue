@@ -58,7 +58,7 @@ export default {
 					name:'Machine Learning',
 					semester:'Fall',
 					university:'Sharif University of Technology',
-					link:'#',
+					link:'https://github.com/asharifiz/Introduction_to_Machine_Learning',
 					topics:[
 						{
 							name:'math',
