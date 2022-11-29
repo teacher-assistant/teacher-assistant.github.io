@@ -75,6 +75,10 @@ export default {
 						{
 							name:'github',
 							type:'logo'
+						},
+						{
+							name:'git',
+							type:'logo'
 						}
 					]
 				},
@@ -97,6 +101,10 @@ export default {
 						{
 							name:'github',
 							type:'logo'
+						},
+						{
+							name:'git',
+							type:'logo'
 						}
 					]
 				},
@@ -113,6 +121,10 @@ export default {
 						},
 						{
 							name:'github',
+							type:'logo'
+						},
+						{
+							name:'git',
 							type:'logo'
 						}
 					]

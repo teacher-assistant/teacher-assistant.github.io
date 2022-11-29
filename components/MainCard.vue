@@ -19,7 +19,7 @@ export default {
 			sections:{
 				full_name:{
 					is_active: false,
-					title:"Course Catalogue",
+					title:"Courses",
 					class_name: "alert-primary"
 				},
 				first_title:{
