@@ -3,50 +3,59 @@
 		<div class="d-grid gap-1" v-for="course in courses">
 	      	<div class="alert-primary rounded p-2 p-lg-4 p-lg-2 row">
 	        	<div class="d-grid gap-2 col-5">
-	        		<div class="d-flex justify-content-start">
-	        			<box-icon name='book'></box-icon>
-	        			<div class="ms-2">
+	        		<div class="d-flex justify-content-left">
+	        			<img src="https://img.icons8.com/bubbles/50/book.png" class="ico" />
+	        			<div class="ms-2 horizental-centric-1">
 	        				{{ course.name }}
 	        			</div>
 	        		</div>
 	        		<div>
-	        			<box-icon v-for="topic in course.topics" size="md" :type="topic.type" :name='topic.name'></box-icon>
+	        			<img class="ico" v-for="topic in course.topics" :name='topic.name' :src="topic.source" />
 	        		</div>
 	        	</div>
-	        	<div class="d-grid gap-2 col-5">
-	        		<div class="d-flex justify-content-start">
-	        			<box-icon name='calendar'></box-icon>
-	        			<div class="ms-2">
+	        	<div class="d-grid gap-2 col-4">
+	        		<div class="d-flex justify-content-left">
+	        			<img src="https://img.icons8.com/bubbles/50/calendar--v2.png" class="ico" />
+	        			<div class="ms-2 horizental-centric-1">
 	        				{{ course.semester }} {{ course.year }}
 	        			</div>
 	        		</div>
-	        		<div class="d-flex justify-content-start">
-	        			<box-icon type='solid' name='school'></box-icon>
-	        			<div class="ms-2">
+	        		<div class="d-flex justify-content-left">
+	        			<img src="https://img.icons8.com/bubbles/50/education.png" class="ico" />
+	        			<div class="ms-2 horizental-centric-1">
 	        				{{ course.university }}
 	        			</div>
 	        		</div>
 	        	</div>
-	        	<div class="col-2">
-	        		<a
-	        			v-show="course.link"
-	        			type="button"
-	        			class="btn btn-dark"
-	        			:href="course.link"
-	        		>
-	        		<div class="d-flex justify-content-start">
-	        			<box-icon name='link' color='white' ></box-icon>
-						<div class="ms-2">
-							Course page
-						</div>
-	        		</div>
-					</a>
+	        	<div class="col-3">
+	        		<div class="d-flex justify-content-left">
+		        		<a
+		        			v-show="course.link"
+		        			:href="course.link"
+		        			@mouseenter="update_link_text_visablity(course)"
+		        			@mouseleave="update_link_text_visablity(course)"
+		        		>
+							<img src="https://img.icons8.com/bubbles/100/link.png" class="ico"/>
+						</a>
+						<span class="horizental-centric-2" v-show="course.link_text_visablity">
+							{{ course.link_text }}
+						</span>
+					</div>
 	        	</div>
 	    	</div>
 	    </div>
 	    <div></div>
 	</div>
 </template>
+
+<style>
+.horizental-centric-1{
+	padding-top: 2%;
+}
+.horizental-centric-2{
+	padding-top: 13%;
+}
+</style>
 
 <script>
 export default {
@@ -59,26 +68,28 @@ export default {
 					semester:'Fall',
 					university:'Sharif University of Technology',
 					link:'https://github.com/asharifiz/Introduction_to_Machine_Learning',
+					link_text_visablity:false,
+					link_text:'GitHub of the Course',
 					topics:[
 						{
 							name:'math',
-							type:''
+							source:'https://img.icons8.com/bubbles/50/repository.png'
 						},
 						{
 							name:'python',
-							type:'logo'
+							source:'https://img.icons8.com/clouds/50/python.png'
 						},
 						{
 							name:'terminal',
-							type:'solid'
+							source:'https://img.icons8.com/bubbles/50/console.png'
 						},
 						{
 							name:'github',
-							type:'logo'
+							source:'https://img.icons8.com/bubbles/50/github.png'
 						},
 						{
 							name:'git',
-							type:'logo'
+							source:'https://img.icons8.com/bubbles/50/code-fork.png'
 						}
 					]
 				},
@@ -88,23 +99,25 @@ export default {
 					semester:'Winter',
 					university:'University of Zanjan',
 					link:'https://teacher-assistant.github.io/winter2022-PrinciplesOfDatabaseDesign',
+					link_text_visablity:false,
+					link_text:'Website of the Course',
 					topics:[
 						{
 							name:'python',
-							type:'logo'
+							source:'https://img.icons8.com/clouds/50/python.png'
 						},
 
 						{
 							name:'postgresql',
-							type:'logo'
+							source:'https://img.icons8.com/bubbles/50/database.png'
 						},
 						{
 							name:'github',
-							type:'logo'
+							source:'https://img.icons8.com/bubbles/50/github.png'
 						},
 						{
 							name:'git',
-							type:'logo'
+							source:'https://img.icons8.com/bubbles/50/code-fork.png'
 						}
 					]
 				},
@@ -112,20 +125,22 @@ export default {
 					year:'2022',
 					name:'Advance Programming',
 					semester:'Winter',
-					university:'Islamic Azad University',
+					university:'Islamic Azad University, Zanjan Branch',
 					link:'https://teacher-assistant.github.io/winter2022-AdvanceProgramming',
+					link_text:'Website of the Course',
+					link_text_visablity:false,
 					topics:[
 						{
 							name:'python',
-							type:'logo'
+							source:'https://img.icons8.com/clouds/50/python.png'
 						},
 						{
 							name:'github',
-							type:'logo'
+							source:'https://img.icons8.com/bubbles/50/github.png'
 						},
 						{
 							name:'git',
-							type:'logo'
+							source:'https://img.icons8.com/bubbles/50/code-fork.png'
 						}
 					]
 				},
@@ -135,18 +150,25 @@ export default {
 					semester:'Fall',
 					university:'University of Zanjan',
 					link:'https://teacher-assistant.github.io/fall2021-DigitalLogicDesign',
+					link_text:'Website of the Course',
+					link_text_visablity:false,
 					topics:[
 						{
 							name:'math',
-							type:''
+							source:'https://img.icons8.com/bubbles/50/repository.png'
 						},
 						{
 							name:'microchip',
-							type:''
+							source:'https://img.icons8.com/bubbles/50/motherboard.png'
 						}
 					]
 				}
 			]
+		}
+	},
+	methods:{
+		update_link_text_visablity(course){
+			course.link_text_visablity =! course.link_text_visablity;
 		}
 	}
 }
