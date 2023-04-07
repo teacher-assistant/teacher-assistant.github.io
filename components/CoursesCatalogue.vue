@@ -4,24 +4,24 @@
 	      	<div class="alert-primary rounded p-2 p-lg-4 p-lg-2 row">
 	        	<div class="d-grid gap-2 col-5">
 	        		<div class="d-flex justify-content-left">
-	        			<img src="https://img.icons8.com/bubbles/50/book.png" class="ico" />
+	        			<img src="https://img.icons8.com/bubbles/1000/book.png" class="ico icon" />
 	        			<div class="ms-2 horizental-centric-1">
 	        				{{ course.name }}
 	        			</div>
 	        		</div>
 	        		<div>
-	        			<img class="ico" v-for="topic in course.topics" :name='topic.name' :src="topic.source" />
+	        			<img class="ico icon" v-for="topic in course.topics" :name='topic.name' :src="topic.source" />
 	        		</div>
 	        	</div>
 	        	<div class="d-grid gap-2 col-4">
 	        		<div class="d-flex justify-content-left">
-	        			<img src="https://img.icons8.com/bubbles/50/calendar--v2.png" class="ico" />
+	        			<img src="https://img.icons8.com/bubbles/1000/calendar--v2.png" class="ico icon" />
 	        			<div class="ms-2 horizental-centric-1">
 	        				{{ course.semester }} {{ course.year }}
 	        			</div>
 	        		</div>
 	        		<div class="d-flex justify-content-left">
-	        			<img src="https://img.icons8.com/bubbles/50/education.png" class="ico" />
+	        			<img src="https://img.icons8.com/bubbles/1000/education.png" class="ico icon" />
 	        			<div class="ms-2 horizental-centric-1">
 	        				{{ course.university }}
 	        			</div>
@@ -35,7 +35,7 @@
 		        			@mouseenter="update_link_text_visablity(course)"
 		        			@mouseleave="update_link_text_visablity(course)"
 		        		>
-							<img src="https://img.icons8.com/bubbles/100/link.png" class="ico"/>
+							<img src="https://img.icons8.com/bubbles/1000/link.png" class="ico link-icon"/>
 						</a>
 						<span class="horizental-centric-2" v-show="course.link_text_visablity">
 							{{ course.link_text }}
@@ -47,6 +47,17 @@
 	    <div></div>
 	</div>
 </template>
+
+<style>
+.icon{
+	width: 50px;
+	height: 50px;
+}
+.link-icon{
+	width: 100px;
+	height: 100px;	
+}
+</style>
 
 <style>
 .horizental-centric-1{
@@ -73,23 +84,23 @@ export default {
 					topics:[
 						{
 							name:'math',
-							source:'https://img.icons8.com/bubbles/50/repository.png'
+							source:'https://img.icons8.com/bubbles/1000/repository.png'
 						},
 						{
 							name:'python',
-							source:'https://img.icons8.com/clouds/50/python.png'
+							source:'https://img.icons8.com/clouds/1000/python.png'
 						},
 						{
 							name:'terminal',
-							source:'https://img.icons8.com/bubbles/50/console.png'
+							source:'https://img.icons8.com/bubbles/1000/console.png'
 						},
 						{
 							name:'github',
-							source:'https://img.icons8.com/bubbles/50/github.png'
+							source:'https://img.icons8.com/bubbles/1000/github.png'
 						},
 						{
 							name:'git',
-							source:'https://img.icons8.com/bubbles/50/code-fork.png'
+							source:'https://img.icons8.com/bubbles/1000/code-fork.png'
 						}
 					]
 				},
@@ -104,20 +115,20 @@ export default {
 					topics:[
 						{
 							name:'python',
-							source:'https://img.icons8.com/clouds/50/python.png'
+							source:'https://img.icons8.com/clouds/1000/python.png'
 						},
 
 						{
 							name:'postgresql',
-							source:'https://img.icons8.com/bubbles/50/database.png'
+							source:'https://img.icons8.com/bubbles/1000/database.png'
 						},
 						{
 							name:'github',
-							source:'https://img.icons8.com/bubbles/50/github.png'
+							source:'https://img.icons8.com/bubbles/1000/github.png'
 						},
 						{
 							name:'git',
-							source:'https://img.icons8.com/bubbles/50/code-fork.png'
+							source:'https://img.icons8.com/bubbles/1000/code-fork.png'
 						}
 					]
 				},
@@ -132,15 +143,15 @@ export default {
 					topics:[
 						{
 							name:'python',
-							source:'https://img.icons8.com/clouds/50/python.png'
+							source:'https://img.icons8.com/clouds/1000/python.png'
 						},
 						{
 							name:'github',
-							source:'https://img.icons8.com/bubbles/50/github.png'
+							source:'https://img.icons8.com/bubbles/1000/github.png'
 						},
 						{
 							name:'git',
-							source:'https://img.icons8.com/bubbles/50/code-fork.png'
+							source:'https://img.icons8.com/bubbles/1000/code-fork.png'
 						}
 					]
 				},
@@ -155,11 +166,11 @@ export default {
 					topics:[
 						{
 							name:'math',
-							source:'https://img.icons8.com/bubbles/50/repository.png'
+							source:'https://img.icons8.com/bubbles/1000/repository.png'
 						},
 						{
 							name:'microchip',
-							source:'https://img.icons8.com/bubbles/50/motherboard.png'
+							source:'https://img.icons8.com/bubbles/1000/motherboard.png'
 						}
 					]
 				}
