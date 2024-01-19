@@ -74,6 +74,29 @@ export default {
 		return{
 			courses:[
 				{
+					year:'2024',
+					name:'Databases',
+					semester:'Winter',
+					university:'Concordia University',
+					link:'https://users.encs.concordia.ca/~shiri/',
+					link_text_visablity:false,
+					link_text:'Website of the instructor',
+					topics:[
+						{
+							name:'postgresql',
+							source:'https://img.icons8.com/bubbles/1000/database.png'
+						},
+						{
+							name:'github',
+							source:'https://img.icons8.com/bubbles/1000/github.png'
+						},
+						{
+							name:'git',
+							source:'https://img.icons8.com/bubbles/1000/code-fork.png'
+						}
+					]
+				},
+				{
 					year:'2022',
 					name:'Machine Learning',
 					semester:'Fall',
