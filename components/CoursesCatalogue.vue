@@ -78,7 +78,7 @@ export default {
 					name:'Databases',
 					semester:'Winter',
 					university:'Concordia University',
-					link:'https://users.encs.concordia.ca/~shiri/',
+					link:'https://teacher-assistant.github.io/winter2024-Databases/',
 					link_text_visablity:false,
 					link_text:'Website of the instructor',
 					topics:[
