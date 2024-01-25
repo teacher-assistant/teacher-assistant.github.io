@@ -80,7 +80,7 @@ export default {
 					university:'Concordia University',
 					link:'https://teacher-assistant.github.io/winter2024-Databases/',
 					link_text_visablity:false,
-					link_text:'Website of the instructor',
+					link_text:'Website of the course',
 					topics:[
 						{
 							name:'postgresql',
