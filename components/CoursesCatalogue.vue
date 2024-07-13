@@ -55,7 +55,7 @@
 }
 .link-icon{
 	width: 100px;
-	height: 100px;	
+	height: 100px;
 }
 </style>
 
@@ -73,6 +73,29 @@ export default {
 	data(){
 		return{
 			courses:[
+        {
+          year:'2024',
+          name:'Databases',
+          semester:'Summer',
+          university:'Concordia University',
+          link:'https://teacher-assistant.github.io/summer2024-Databases/',
+          link_text_visablity:false,
+          link_text:'Website of the course',
+          topics:[
+            {
+              name:'postgresql',
+              source:'https://img.icons8.com/bubbles/1000/database.png'
+            },
+            {
+              name:'github',
+              source:'https://img.icons8.com/bubbles/1000/github.png'
+            },
+            {
+              name:'git',
+              source:'https://img.icons8.com/bubbles/1000/code-fork.png'
+            }
+          ]
+        },
 				{
 					year:'2024',
 					name:'Databases',
